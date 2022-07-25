@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<h1> Celsius to Fahrenheit </h1>
+
+<body>
+  Enter temperature in celsius: <input id="C">
+  <br><br>
+  <button onclick="Fahrenheit()"> convert </button>
+  <p id="res"></p>
+  <script>
+    const Fahrenheit = () => {
+      let f, c = document.getElementById("C").value;
+      f = c * 9 / 5 + 32;
+      document.getElementById("res").innerHTML = "Temperature in Fahrenheit is:" + f.toFixed(2);
+    }
+  </script>
+</body>
+
+</html>

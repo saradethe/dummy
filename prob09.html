@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<h1> Find all of the roots of the quadratic </h1>
+
+<body>
+  Enter a : <input id="i1">
+  <br><br>
+  Enter b : <input id="i2">
+  <br><br>
+  Enter c : <input id="i3">
+  <br><br>
+  <button onclick="quadratic()"> find </button>
+  <p id="res"></p>
+  <script>
+    const quadratic = () => {
+      let a = document.getElementById("i1").value;
+      let b = document.getElementById("i2").value;
+      let c = document.getElementById("i3").value;
+      let root1, root2, discriminant = b * b - 4 * a * c;
+      if (discriminant > 0) {
+        root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+        root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+        document.getElementById("res").innerHTML = "Roots: " + root1.toFixed(2) + "  " + root2.toFixed(2);
+      }
+      else if (discriminant == 0) {
+        root1 = root2 = -b / (2 * a);
+        document.getElementById("res").innerHTML = "Roots: " + root1.toFixed(2) + "  " + root2.toFixed(2);
+      }
+      else {
+        let realPart = (-b / (2 * a)).toFixed(2);
+        let imagPart = (Math.sqrt(-discriminant) / (2 * a)).toFixed(2);
+        document.getElementById("res").innerHTML = "Roots: " + realPart + "  " + imagPart;
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<h1>Postfix expression</h1>
+
+<body>
+  <button onclick="Postfix()"> find </button>
+  <script>
+    Postfix = () => {
+      let exp = "531/1*+9-", stack = exp.split(''), ans
+      for (let j = 0; j < exp.length; j++)
+        document.write(stack[j] + " ")
+      for (let i = 0; i < exp.length; i++) {
+        let val = exp[i];
+        if (!isNaN(parseInt(val)))
+          stack.push(val.charCodeAt(0) - '0'.charCodeAt(0));
+        else {
+          let a = stack.pop();
+          let b = stack.pop();
+          switch (val) {
+            case '+':
+              stack.push(b + a);
+              break;
+            case '-':
+              stack.push(b - a);
+              break;
+            case '/':
+              stack.push(b / a);
+              break;
+            case '*':
+              stack.push(b * a);
+              break;
+          }
+        }
+      }
+      ans = stack.pop()
+      document.write("<br><br>" + ans + "")
+    }
+  </script>
+</body>
+
+</html>

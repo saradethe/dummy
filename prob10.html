@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<h1> To sort array according to even odd index </h1>
+
+<body>
+  Array: 3 9 1 44 6
+  <br><br>
+  <button onclick="Array()"> find </button>
+  <script>
+    const Array = () => {
+      let arr = [3, 9, 1, 44, 6], arr1 = [], even = [], odd = []
+      for (let i = 0; i < arr.length; i++) {
+        if (i == 0 || i % 2 == 0)
+          even.push(arr[i]);
+        else
+          odd.push(arr[i]);
+      }
+      even.sort((a, b) => a - b);
+      odd.sort((a, b) => a - b);
+      for (let i = 0; i < even.length; i++) {
+        arr1.push(even[i])
+        if (i < odd.length)
+          arr1.push(odd[i])
+      }
+      for (let i = 0; i < arr1.length; i++)
+        document.write(arr1[i] + " ");
+    }
+  </script>
+</body>
+
+</html>

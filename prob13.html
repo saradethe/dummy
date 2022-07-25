@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<h1> Find Nth position in series </h1>
+
+<body>
+  Enter number of term for series: <input id="n">
+  <br><br>
+  Enter nth position (starts from 0): <input id="nth">
+  <br><br>
+  <button onclick="series()"> submit </button>
+  <p id="res"></p>
+  <script>
+    const series = () => {
+      let sq = [], n = document.getElementById("n").value, term = document.getElementById("nth").value, sum = 0
+      if (n < 0)
+        document.getElementById("res").innerHTML = "Error";
+      else {
+        n = n * 2
+        document.write("Series:")
+        for (let i = 2; i <= n; i += 2) {
+          sum = sum + i
+          sq.push(sum)
+          document.write(" " + sum)
+        }
+      }
+      for (let i = 0; i <= n; i++) {
+        if (i == term)
+          document.write("<br><br>" + "Value on " + i + " position is " + sq[i]);
+      }
+
+    }
+  </script>
+</body>
+
+</html>

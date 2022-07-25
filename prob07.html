@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<h1> Series of N numbers </h1>
+
+<body>
+  Enter number of terms for series: <input id="n">
+  <br><br>
+  Enter nth position : <input id="nth">
+  <br><br>
+  <button onclick="series()"> submit </button>
+  <p id="res"></p>
+  <script>
+    const series = () => {
+      let sq = [], n = document.getElementById("n").value, term = document.getElementById("nth").value;
+      if (n < 0)
+        document.getElementById("res").innerHTML = "Error";
+      else if (n == 0)
+        document.getElementById("res").innerHTML = "0";
+      else {
+        document.write("Series:")
+        for (let i = 1; i <= n; i++) {
+          sq[i] = i * i;
+          document.write(" " + sq[i]);
+        }
+        for (let i = 1; i <= n; i++) {
+          if (i == term)
+            document.write("<br><br>" + "Value on " + term + " position is " + sq[i]);
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<h1> Cube </h1>
+
+<body>
+  Enter a number: <input id="num">
+  <br><br>
+  <button onclick="cube()"> Cube </button>
+  <p id="res"></p>
+  <script>
+    const cube = () => {
+      let n, c
+      n = document.getElementById("num").value;
+      if (n < 0)
+        document.getElementById("res").innerHTML = "Negative number. Please enter positive number"
+      else if (n == 0)
+        document.getElementById("res").innerHTML = "Cube of 0 is 0"
+      else {
+        c = n * n * n
+        document.getElementById("res").innerHTML = "The cube of the number " + n + " is: " + c;
+      }
+    }
+  </script>
+</body>
+
+</html>

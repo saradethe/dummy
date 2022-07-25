@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<h1> Sum of N numbers </h1>
+
+<body>
+  Enter a number: <input id="n">
+  <br><br>
+  <button onclick="add()"> sum </button>
+  <p id="res"></p>
+  <script>
+    const add = () => {
+      let sum = 0, n = document.getElementById("n").value;
+      for (let i = 1; i <= n; i++) {
+        sum += i;
+      }
+      document.getElementById("res").innerHTML = "Sum of numbers from 1 to " + n + " is: " + sum;
+    }
+  </script>
+</body>
+
+</html>

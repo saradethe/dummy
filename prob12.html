@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<h1>Count palindrome</h1>
+
+<body>
+  Enter starting number: <input type="number" id="s">
+  <br><br>
+  Enter ending number: <input type="number" id="e">
+  <br><br>
+  <button onclick="count()"> find </button>
+  <p id="res"></p>
+  <script>
+    const count = () => {
+      let sn = document.getElementById("s").value;
+      let en = document.getElementById("e").value;
+      document.write("Palindrome numbers from " + sn + "to " + en + "<br><br>");
+      let i, curr, rev, rem, c = 0;
+      for (i = sn; i <= en; i++) {
+        curr = i;
+        rev = 0;
+        while (curr) {
+          rem = curr % 10;
+          curr = parseInt(curr / 10);
+          rev = rev * 10 + rem;
+          if (i == rev)
+            c++
+        }
+      }
+      document.write("Total palindrome are: " + c);
+    }
+  </script>
+</body>
+
+</html>

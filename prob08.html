@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<h1> Eliminate space & find length of string </h1>
+
+<body>
+  Enter a string: <input id="s">
+  <br><br>
+  <button onclick="strfunc()"> submit </button>
+  <p id="res"></p>
+  <script>
+    const strfunc = () => {
+      let str1 = document.getElementById("s").value;
+      let str2 = str1.replace(/ /g, '');
+      if (str1 < 0)
+        document.getElementById("res").innerHTML = "Error";
+      else if (str1 == 0)
+        document.getElementById("res").innerHTML = "0";
+      else
+        document.getElementById("res").innerHTML = str2.length;
+    }
+  </script>
+</body>
+
+</html>

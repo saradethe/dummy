@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<h1> Area of equilateral triangle </h1>
+
+<body>
+  Enter side: <input id="s">
+  <br><br>
+  <button onclick="area(s)"> area </button>
+  <p id="res"></p>
+  <script>
+    const area = (s) => {
+      let side, a
+      side = document.getElementById("s").value;
+      a = (((Math.sqrt(3)) / 4) * side * side).toFixed(2);
+      document.getElementById("res").innerHTML = "The area of equilateral triangle is: " + a;
+    }
+  </script>
+</body>
+
+</html>
