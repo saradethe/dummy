@@ -1,0 +1,134 @@
+*{
+    margin:auto;
+    padding: auto;
+}
+.t1{
+    color: white;
+    border-color: black;
+
+}
+.navbar{
+    display: flex;
+}
+.nav-list{
+width: 100%;
+background-color: coral;
+display: flex;
+align-items: center;
+}
+.nav-list li{
+    list-style: none;
+    padding: 20px 130px;
+    
+}
+.nav-list li a{
+    text-decoration: none;
+    color: white;
+    
+}
+.nav-list li a:hover{
+    text-decoration: none;
+    color:purple;
+    
+}
+.par1 {
+    min-height: 700px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.grid-container {
+    display: grid;
+    justify-content: space-evenly;
+    background-color: coral;
+    column-gap: 50px;
+    grid-template-columns: auto auto ;
+    grid-template-rows: auto auto;
+    padding: 10px;
+  }
+  .grid-item {
+    display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-gap: 15px;
+
+   
+
+}
+.about{
+    background-color:purple;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: white ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: auto;
+    
+}
+.same{
+    background-color:purple;
+    
+    height: 100vh;
+    justify-content: center;
+    align-items: left;
+    color: white ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr );
+    grid-template-rows: repeat(20, 1fr );
+    grid-gap: 200px;
+    
+}
+.same li{
+    list-style: none;
+}
+.box{
+    box-sizing:border-box
+    p;
+    width: 500px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 80%;
+    left: 50%;
+    overflow: hidden;
+    border: 10px solid white;
+    border-radius: 2px;
+    box-shadow: -1px 5px 15px black;
+}
+
+/*Area of images*/
+.slider{
+    width:100%;
+    display: flex;
+    animation: slide 16s infinite;
+}
+
+/*Animation activated by keyframes*/
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    55%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-200%);
+    }
+    80%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
+}
+
